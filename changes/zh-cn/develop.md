@@ -2,55 +2,48 @@
 
 <!-- 请根据PR的类型添加 `变更记录` 到以下对应位置(feature/bugfix/optimize/test) 下 -->
 
-### feature：
-- [[#4802](https://github.com/seata/seata/pull/4802)] dockerfile 支持 arm64
-- [[#4863](https://github.com/seata/seata/pull/4863)] support oracle and postgresql multi primary key
-- [[#4649](https://github.com/seata/seata/pull/4649)] seata-server支持多注册中心
-- [[#4479](https://github.com/seata/seata/pull/4479)] TCC注解支持添加在实现类及其方法上也生效
+### feature:
+- [[#PR_NO](https://github.com/seata/seata/pull/PR_NO)] 准确简要的PR描述
 
+### bugfix:
+- [[#5887](https://github.com/seata/seata/pull/5887)] 修复全局事务钩子重复执行
+- [[#5991](https://github.com/seata/seata/pull/5991)] 修复redis sentinel master node 宕机时，lua脚本未同步的问题
+- [[#6025](https://github.com/seata/seata/pull/6025)] 修复控制台点击事务信息页面中的"查看全局锁"按钮之后白屏的问题
+- [[#6026](https://github.com/seata/seata/pull/6026)] 修复异常的打点
+- [[#4410](https://github.com/seata/seata/pull/4410)] 修复jdk9+版本编译后，引入后ByteBuffer#flip NoSuchMethodError的问题
+- [[#6104](https://github.com/seata/seata/pull/6104)] 修复在TCC模式下, dubbo 3.x版本消费者端不能生成TCC代理的问题
+- [[#6409](https://github.com/seata/seata/pull/6409)] 修复 RemotingParser 失败导致 AT 模式无法执行的问题
+- [[#6628](https://github.com/seata/seata/pull/6628)] 修复 Alibaba Dubbo 转换错误
+- [[#6632](https://github.com/seata/seata/pull/6632)] 修复 hsf ConsumerModel 转换错误
+- [[#6661](https://github.com/seata/seata/pull/6661)] 修复`tableMeta`缓存定时刷新失效问题
+- [[#6715](https://github.com/apache/incubator-seata/pull/6715)] 修复达梦数据库的getRollbackInfo没有解压缩的问题
+- [[#6716](https://github.com/apache/incubator-seata/pull/6716)] 修复达梦数据库的delete sql回滚失败的问题
 
-### bugfix：
-- [[#4817](https://github.com/seata/seata/pull/4817)] 修复高版本springboot配置不标准的问题
-- [[#4838](https://github.com/seata/seata/pull/4838)] 修复使用 Statement.executeBatch() 时无法生成undo log 的问题
-- [[#4779](https://github.com/seata/seata/pull/4779)] 修复支持 Apache Dubbo 3 版本
-- [[#4912](https://github.com/seata/seata/pull/4912)] 修复mysql InsertOnDuplicateUpdate 列名大小写不一致无法正确匹配
-- [[#4543](https://github.com/seata/seata/pull/4543)] 修复对 Oracle 数据类型nclob的支持
-- [[#4915](https://github.com/seata/seata/pull/4915)] 修复获取不到ServerRecoveryProperties属性的问题
+### optimize:
+- [[#6044](https://github.com/seata/seata/pull/6044)] 优化MySQL衍生数据库判断逻辑
+- [[#6361](https://github.com/seata/seata/pull/6361)] 优化部分链接 401 的问题
+- [[#6903](https://github.com/apache/incubator-seata/pull/6903)] 优化`tableMeta`缓存定时刷新问题
+- [[#7001](https://github.com/apache/incubator-seata/pull/7001)] 优化 metrics 指标
+- [[#7002](https://github.com/apache/incubator-seata/pull/7002)] 优化 AT 事务模式锁释放逻辑
+- [[#7007](https://github.com/apache/incubator-seata/pull/7007)] 修复在ARM64平台下CI构建出错的问题
 
-### optimize：
-- [[#4774](https://github.com/seata/seata/pull/4774)] 优化 seataio/seata-server 镜像中的 mysql8 依赖
-- [[#4750](https://github.com/seata/seata/pull/4750)] 优化AT分支释放全局锁不使用xid
-- [[#4790](https://github.com/seata/seata/pull/4790)] 添加一个 github action，用于自动发布Seata到OSSRH
-- [[#4765](https://github.com/seata/seata/pull/4765)] mysql8.0.29版本及以上XA模式不持connection至二阶段
-- [[#4797](https://github.com/seata/seata/pull/4797)] 优化所有github actions脚本
-- [[#4800](https://github.com/seata/seata/pull/4800)] 按照 Apache 协议规范，添加 NOTICE 文件
-- [[#4761](https://github.com/seata/seata/pull/4761)] 使用 hget 代替 RedisLocker 中的 hmget, 因为只有一个 field
-- [[#4414](https://github.com/seata/seata/pull/4414)] 移除log4j依赖
-- [[#4836](https://github.com/seata/seata/pull/4836)] 优化 BaseTransactionalExecutor#buildLockKey(TableRecords rowsIncludingPK) 方法可读性
-- [[#4865](https://github.com/seata/seata/pull/4865)] 修复 Saga 可视化设计器 GGEditor 安全漏洞
-- [[#4590](https://github.com/seata/seata/pull/4590)] 自动降级支持开关支持动态配置
-- [[#4490](https://github.com/seata/seata/pull/4490)] tccfence 记录表优化成按索引删除
-- [[#4911](https://github.com/seata/seata/pull/4911)] 添加 header 和license 检测
-- [[#4917](https://github.com/seata/seata/pull/4917)] 升级 package-lock.json 修复漏洞
+### security:
+- [[#PR_NO](https://github.com/seata/seata/pull/PR_NO)] 准确简要的PR描述
 
-### test：
-- [[#4794](https://github.com/seata/seata/pull/4794)] 重构代码，尝试修复单元测试 `DataSourceProxyTest.getResourceIdTest()`
-
+### test:
+- [[#6151](https://github.com/seata/seata/pull/6151)] 添加对 `MacOS` 和 `Windows` 的测试
 
 非常感谢以下 contributors 的代码贡献。若有无意遗漏，请报告。
 
 <!-- 请确保您的 GitHub ID 在以下列表中 -->
 - [slievrly](https://github.com/slievrly)
-- [lcmvs](https://github.com/lcmvs)
-- [wangliang181230](https://github.com/wangliang181230)
-- [a364176773](https://github.com/a364176773)
-- [AlexStocks](https://github.com/AlexStocks)
-- [liujunlin5168](https://github.com/liujunlin5168)
-- [pengten](https://github.com/pengten)
+- [jsbxyyx](https://github.com/jsbxyyx)
 - [liuqiufeng](https://github.com/liuqiufeng)
-- [yujianfei1986](https://github.com/yujianfei1986)
-- [Bughue](https://github.com/Bughue)
-- [AlbumenJ](https://github.com/AlbumenJ)
-- [doubleDimple](https://github.com/doubleDimple)
+- [ptyin](https://github.com/ptyin)
+- [funky-eyes](https://github.com/funky-eyes)
+- [laywin](https://github.com/laywin)
+- [wuwen5](https://github.com/wuwen5)
+- [caohdgege](https://github.com/caohdgege)
+- [xingfudeshi](https://github.com/xingfudeshi)
 
 同时，我们收到了社区反馈的很多有价值的issue和建议，非常感谢大家。

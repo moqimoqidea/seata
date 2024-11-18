@@ -41,11 +41,6 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>seata-tcc</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>seata-rm</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -55,8 +50,9 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>seata-tcc</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <!-- spring  -->
@@ -78,8 +74,6 @@
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-coroutines-core</artifactId>
         </dependency>
-
-
     </dependencies>
 
     <build>

@@ -3,55 +3,47 @@ Add changes here for all PR submitted to the develop branch.
 <!-- Please add the `changes` to the following location(feature/bugfix/optimize/test) based on the type of PR -->
 
 ### feature:
-- [[#4802](https://github.com/seata/seata/pull/4802)] dockerfile support arm64
-- [[#4863](https://github.com/seata/seata/pull/4863)] support oracle and postgresql multi primary key
-- [[#4649](https://github.com/seata/seata/pull/4649)] seata-server support multiple registry
-- [[#4479](https://github.com/seata/seata/pull/4479)] TCC mode supports tcc annotation marked on both interface and implementation class
-
+- [[#PR_NO](https://github.com/seata/seata/pull/PR_NO)] A brief and accurate description of PR
 
 ### bugfix:
-- [[#4817](https://github.com/seata/seata/pull/4817)] fix in high version springboot property not Standard
-- [[#4838](https://github.com/seata/seata/pull/4838)] fix when use Statement.executeBatch() can not generate undo log
-- [[#4779](https://github.com/seata/seata/pull/4779)] fix and support Apache Dubbo 3
-- [[#4912](https://github.com/seata/seata/pull/4912)] fix mysql InsertOnDuplicateUpdate column case is different and cannot be matched
-- [[#4543](https://github.com/seata/seata/pull/4543)] fix support Oracle nclob types
-- [[#4915](https://github.com/seata/seata/pull/4915)] fix failed to get server recovery properties
-
-
+- [[#5887](https://github.com/seata/seata/pull/5887)] fix global transaction hook repeat execute
+- [[#5991](https://github.com/seata/seata/pull/5991)] fix the issue that the Lua script is not synchronized when the redis sentinel master node is down
+- [[#6025](https://github.com/seata/seata/pull/6025)] fix the white screen after click the "View Global Lock" button on the transaction info page in the console
+- [[#6026](https://github.com/seata/seata/pull/6026)] fix incorrect metric report
+- [[#4410](https://github.com/seata/seata/pull/4410)] support jdk9+ compile code
+- [[#6104](https://github.com/seata/seata/pull/6104)] fix dubbo 3.x consumer can't generate TCC proxy in tcc mode.
+- [[#6409](https://github.com/seata/seata/pull/6409)] fix the failure of RemotingParser to prevent AT mode from executing.
+- [[#6628](https://github.com/seata/seata/pull/6628)] fix Alibaba Dubbo convert error.
+- [[#6632](https://github.com/seata/seata/pull/6632)] fix hsf ConsumerModel convert error.
+- [[#6661](https://github.com/seata/seata/pull/6661)] fix `tableMeta` cache scheduled refresh issue
+- [[#6715](https://github.com/apache/incubator-seata/pull/6715)] fix dameng rollback info un compress fail
+- [[#6716](https://github.com/apache/incubator-seata/pull/6716)] fix dameng delete undo fail
+- 
 ### optimize:
-- [[#4774](https://github.com/seata/seata/pull/4774)] optimize mysql8 dependencies for seataio/seata-server image
-- [[#4790](https://github.com/seata/seata/pull/4790)] Add a github action to publish Seata to OSSRH
-- [[#4765](https://github.com/seata/seata/pull/4765)] mysql 8.0.29 not should be hold for connection
-- [[#4750](https://github.com/seata/seata/pull/4750)] optimize unBranchLock romove xid
-- [[#4797](https://github.com/seata/seata/pull/4797)] optimize the github actions
-- [[#4800](https://github.com/seata/seata/pull/4800)] Add NOTICE as Apache License V2
-- [[#4761](https://github.com/seata/seata/pull/4761)] use hget replace hmget because only one field
-- [[#4414](https://github.com/seata/seata/pull/4414)] exclude log4j dependencies
-- [[#4836](https://github.com/seata/seata/pull/4836)] optimize BaseTransactionalExecutor#buildLockKey(TableRecords rowsIncludingPK) method more readable
-- [[#4865](https://github.com/seata/seata/pull/4865)] fix some security vulnerabilities in GGEditor
-- [[#4590](https://github.com/seata/seata/pull/4590)] auto degrade enable to dynamic configure
-- [[#4490](https://github.com/seata/seata/pull/4490)] tccfence log table delete by index
-- [[#4911](https://github.com/seata/seata/pull/4911)] add license checker workflow
-- [[#4917](https://github.com/seata/seata/pull/4917)] upgrade package-lock.json fix vulnerabilities
+- [[#6044](https://github.com/seata/seata/pull/6044)] optimize derivative product check base on mysql
+- [[#6361](https://github.com/seata/seata/pull/6361)] optimize 401 issues for some links
+- [[#6903](https://github.com/apache/incubator-seata/pull/6903)] optimize `tableMeta` cache scheduled refresh issue
+- [[#7001](https://github.com/seata/seata/pull/7001)] optimize transaction metrics
+- [[#7002](https://github.com/apache/incubator-seata/pull/7002)] optimize lock release logic in AT transaction mode
+- [[#7007](https://github.com/apache/incubator-seata/pull/7007)] fix the CI build issue on the ARM64 platform
+
+### security:
+- [[#PR_NO](https://github.com/seata/seata/pull/PR_NO)] A brief and accurate description of PR
 
 ### test:
-- [[#4794](https://github.com/seata/seata/pull/4794)] try to fix the test `DataSourceProxyTest.getResourceIdTest()`
-
+- [[#6151](https://github.com/seata/seata/pull/6151)] add test for `MacOS` and `Windows`
 
 Thanks to these contributors for their code commits. Please report an unintended omission.
 
 <!-- Please make sure your Github ID is in the list below -->
 - [slievrly](https://github.com/slievrly)
-- [lcmvs](https://github.com/lcmvs)
-- [wangliang181230](https://github.com/wangliang181230)
-- [a364176773](https://github.com/a364176773)
-- [AlexStocks](https://github.com/AlexStocks)
-- [liujunlin5168](https://github.com/liujunlin5168)
-- [pengten](https://github.com/pengten)
+- [jsbxyyx](https://github.com/jsbxyyx)
 - [liuqiufeng](https://github.com/liuqiufeng)
-- [yujianfei1986](https://github.com/yujianfei1986)
-- [Bughue](https://github.com/Bughue)
-- [AlbumenJ](https://github.com/AlbumenJ)
-- [doubleDimple](https://github.com/doubleDimple)
+- [ptyin](https://github.com/ptyin)
+- [funky-eyes](https://github.com/funky-eyes)
+- [laywin](https://github.com/laywin)
+- [wuwen5](https://github.com/wuwen5)
+- [caohdgege](https://github.com/caohdgege)
+- [xingfudeshi](https://github.com/xingfudeshi)
 
 Also, we receive many valuable issues, questions and advices from our community. Thanks for you all.

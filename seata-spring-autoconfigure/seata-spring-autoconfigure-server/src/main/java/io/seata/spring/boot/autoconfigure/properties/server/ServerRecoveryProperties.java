@@ -18,6 +18,10 @@ package io.seata.spring.boot.autoconfigure.properties.server;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import static io.seata.common.DefaultValues.DEFAULT_ASYNC_COMMITTING_RETRY_PERIOD;
+import static io.seata.common.DefaultValues.DEFAULT_COMMITING_RETRY_PERIOD;
+import static io.seata.common.DefaultValues.DEFAULT_ROLLBACKING_RETRY_PERIOD;
+import static io.seata.common.DefaultValues.DEFAULT_TIMEOUT_RETRY_PERIOD;
 import static io.seata.spring.boot.autoconfigure.StarterConstants.SERVER_RECOVERY_PREFIX;
 
 /**
@@ -27,43 +31,43 @@ import static io.seata.spring.boot.autoconfigure.StarterConstants.SERVER_RECOVER
 @ConfigurationProperties(prefix = SERVER_RECOVERY_PREFIX)
 public class ServerRecoveryProperties {
 
-    private int committingRetryPeriod = 1000;
-    private int asyncCommittingRetryPeriod = 1000;
-    private int rollbackingRetryPeriod = 1000;
-    private int timeoutRetryPeriod = 1000;
+    private long committingRetryPeriod = DEFAULT_COMMITING_RETRY_PERIOD;
+    private long asyncCommittingRetryPeriod = DEFAULT_ASYNC_COMMITTING_RETRY_PERIOD;
+    private long rollbackingRetryPeriod = DEFAULT_ROLLBACKING_RETRY_PERIOD;
+    private long timeoutRetryPeriod = DEFAULT_TIMEOUT_RETRY_PERIOD;
 
-    public int getCommittingRetryPeriod() {
+    public long getCommittingRetryPeriod() {
         return committingRetryPeriod;
     }
 
-    public ServerRecoveryProperties setCommittingRetryPeriod(int committingRetryPeriod) {
+    public ServerRecoveryProperties setCommittingRetryPeriod(long committingRetryPeriod) {
         this.committingRetryPeriod = committingRetryPeriod;
         return this;
     }
 
-    public int getAsyncCommittingRetryPeriod() {
+    public long getAsyncCommittingRetryPeriod() {
         return asyncCommittingRetryPeriod;
     }
 
-    public ServerRecoveryProperties setAsyncCommittingRetryPeriod(int asyncCommittingRetryPeriod) {
+    public ServerRecoveryProperties setAsyncCommittingRetryPeriod(long asyncCommittingRetryPeriod) {
         this.asyncCommittingRetryPeriod = asyncCommittingRetryPeriod;
         return this;
     }
 
-    public int getRollbackingRetryPeriod() {
+    public long getRollbackingRetryPeriod() {
         return rollbackingRetryPeriod;
     }
 
-    public ServerRecoveryProperties setRollbackingRetryPeriod(int rollbackingRetryPeriod) {
+    public ServerRecoveryProperties setRollbackingRetryPeriod(long rollbackingRetryPeriod) {
         this.rollbackingRetryPeriod = rollbackingRetryPeriod;
         return this;
     }
 
-    public Integer getTimeoutRetryPeriod() {
+    public long getTimeoutRetryPeriod() {
         return timeoutRetryPeriod;
     }
 
-    public ServerRecoveryProperties setTimeoutRetryPeriod(int timeoutRetryPeriod) {
+    public ServerRecoveryProperties setTimeoutRetryPeriod(long timeoutRetryPeriod) {
         this.timeoutRetryPeriod = timeoutRetryPeriod;
         return this;
     }
